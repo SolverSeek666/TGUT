@@ -1,6 +1,6 @@
 var gameData = {
   starterNum: 0,
-  number: 0
+  NormalNum: 0
 }
 function incretiny() {
   gameData.starterNum += 1
