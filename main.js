@@ -8,6 +8,7 @@ function incretiny() {
     gameData.starterNum += 1
     document.getElementById("number").innerHTML = starterList[gameData.starterNum]
   } else {
-    document.getElementById("number").innerHTML = 0.0000000001
+    gameData.starterNum = 0.0000000001
+    document.getElementById("number").innerHTML = gameData.starterNum.prototype.toFixed()
   }
 }
