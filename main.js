@@ -8,7 +8,12 @@ function incretiny() {
     gameData.starterNum += 1
     document.getElementById("number").innerHTML = starterList[gameData.starterNum]
   } else {
+    if (gameData.normalNum < 0.001) {
     gameData.normalNum = 0.0000000001
-    document.getElementById("number").innerHTML = gameData.normalNum.toFixed()
+    document.getElementById("number").innerHTML = gameData.normalNum.toFixed(math.floor(math.log10(gameData.normalNum)))
+  } else {
+    gameData.normalNum = 0.0000000001
+    document.getElementById("number").innerHTML = gameData.normalNum.toFixed(3)
+  }
   }
 }
