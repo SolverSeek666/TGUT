@@ -11,8 +11,6 @@ body {
     overflow: hidden;
     display: inline-block;
     max-width: 100%;
-
-    font-family: DosisSemiBold, serif;
     font-size: 30px;
     white-space: nowrap;
 
