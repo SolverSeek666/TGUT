@@ -19,7 +19,7 @@ body {
     margin-bottom: 0.8rem;
 }
 #numberContainer {
-    height: 0px;
+    height: 1px;
     border-bottom: 1px solid #666;
     max-height: 4rem;
 }
