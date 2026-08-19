@@ -7,6 +7,9 @@ body {
   margin: 0;
 }
 #number {
+    font-family: 'Open Sans', sans-serif;
+}
+#number {
     text-overflow: ellipsis;
     overflow: hidden;
     display: inline-block;
