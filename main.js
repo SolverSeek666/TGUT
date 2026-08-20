@@ -28,6 +28,15 @@ function formatNum(decimal) {
     return decimal.toString();
 }
 // =================================================
+let negpanel = document.getElementsByClassName("negpanel");
+for (let i = 0; i < negpanel.length; i++) {
+    negpanel[i].onclick = function() {
+        if (document.getElementById(`upgrade-neg${10-i}`).disabled === true) {
+            negpanel[i+1].style.display = "";
+        }
+    }
+}
+// =================================================
 function UPneg10() {
   if (game.upNeg10Count >= game.upNeg10Max-1) {
     game.upNeg10Count += 1
@@ -62,8 +71,3 @@ function UPneg9() {
   }
 }
 // =================================================
-// let panel = document.getElementsByClassName("panel");
-// let i < panel.length
-// if (document.getElementsById(`upgrade-neg${10-i}`).disabled = true) {
-//     panel[i+1].style.display = "";
-// }
