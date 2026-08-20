@@ -39,6 +39,11 @@ body {
   align-items: center;
   gap: 30px;
 }
+.negpanel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .panel {
   width: 100%;
   display: flex;
