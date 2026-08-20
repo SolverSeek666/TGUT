@@ -33,15 +33,25 @@ body {
   height: 100px;
   margin-bottom: 8px;
 }
-#first-btn {
-  font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+#panel {
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+#upgrade-btn {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
   font-size: 16px;
+  overflow: hidden;
   white-space: nowrap;
-  border-width: 1px solid #666;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 0;
   align-items: center;
   height: 1.5rem;
-  justify-content: center;
 }
