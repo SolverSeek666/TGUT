@@ -12,7 +12,7 @@ var game = {
   exp: 1
 }
 // =================================================
-var starterList = [0,"ε","BITG","Oe(54)","1/{10,10[2]2}","1/{10,10,10,10}","(g<sub>64</sub>)<sup>-1</sup>","1/{10,10,100}","1/(10^^100)","10<sup>-100</sup>"]
+var starterList = ["0","ε","BITG","Oe(54)","1/{10,10[2]2}","1/{10,10,10,10}","(g<sub>64</sub>)<sup>-1</sup>","1/{10,10,100}","1/(10^^100)","10<sup>-100</sup>","0.0000000001"]
 // =================================================
 function formatNum(decimal) {
     if (decimal < 0.001) {
@@ -27,9 +27,13 @@ function formatNum(decimal) {
 function UP1() {
   if (game.upNeg10Count >= game.upNeg10Max) {
     game.numbers = 0.0000000001
-    document.getElementById("number").innerHTML = formatNum(game.numbers)
+    document.getElementById("number").innerHTML = formatNum(game.numbers);
+    document.getElementById("up1-cost").innerHTML = "Upgrade Maxed";
+    document.getElementById("upgrade-1").disabled = true;
+    return;
   }
   game.upNeg10Count += 1
   document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
+  document.getElementById("up1-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10"
 }
 // =================================================
