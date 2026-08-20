@@ -33,6 +33,12 @@ body {
   height: 100px;
   margin-bottom: 30px;
 }
+.game-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 .panel {
   width: 100%;
   display: flex;
