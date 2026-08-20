@@ -29,6 +29,7 @@ function UP1() {
     game.upNeg10Count += 1
     game.numbers = 0.0000000001
     document.getElementById("number").innerHTML = formatNum(game.numbers);
+    document.getElementById("upneg10-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10";
     document.getElementById("upneg10-cost").innerHTML = "Upgrade Maxed";
     document.getElementById("upgrade-neg10").disabled = true;
     return;
