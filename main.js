@@ -5,6 +5,10 @@ var game = {
   upNeg10Count: 0,
   upNeg10Max: 10,
   
+  upNeg9Cost: 0,
+  upNeg9Count: 0,
+  upNeg9Max: 5,
+  
   productionPerUpgrade: 0.01,
 
   add: 0,
@@ -24,7 +28,7 @@ function formatNum(decimal) {
     return decimal.toString();
 }
 // =================================================
-function UP1() {
+function UPneg10() {
   if (game.upNeg10Count >= game.upNeg10Max-1) {
     game.upNeg10Count += 1
     game.numbers = 0.0000000001
@@ -37,5 +41,24 @@ function UP1() {
   game.upNeg10Count += 1
   document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
   document.getElementById("upneg10-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10"
+}
+// =================================================
+function UPneg9() {
+  if (game.numbers >= 0.0000000001) {
+    if (game.upNeg9Count >= game.upNeg9Max-1) {
+      game.upNeg9Count += 1
+      game.numbers += 0.0000000001
+      document.getElementById("number").innerHTML = formatNum(game.numbers);
+      document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/5";
+      document.getElementById("upneg9-cost").innerHTML = "Upgrade Maxed";
+      document.getElementById("upgrade-neg9").disabled = true;
+      return;
+    };
+    game.upNeg10Count += 1;
+    game.numbers += 0.0000000001;
+    document.getElementById("number").innerHTML = formatNum(game.numbers);
+    document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/5";
+    return;
+  }
 }
 // =================================================
