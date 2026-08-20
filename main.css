@@ -16,7 +16,7 @@ body {
   max-width: 100%;
   font-size: 30px;
   white-space: nowrap;
-  margin-bottom: 16px;
+  margin-bottom: 0.8rem;
 }
 #numberContainer {
   max-width: 100%;
