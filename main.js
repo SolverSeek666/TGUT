@@ -24,12 +24,12 @@ function formatNum(decimal) {
     return decimal.toString();
 }
 // =================================================
-document.getElementById("upgrade-1").addEventListener("click", () => {
+function UP1() {
   if (game.upNeg10Count >= game.upNeg10Max) {
     return game.upNeg10Count += 1
     return document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
   }
   return game.numbers = 0.0000000001
   return document.getElementById("number").innerHTML = formatNum(game.numbers)
-});
+}
 // =================================================
