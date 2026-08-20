@@ -33,25 +33,87 @@ body {
   height: 100px;
   margin-bottom: 8px;
 }
-#panel {
+.panel {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-#upgrade-btn {
-  font-family: 'Open Sans', sans-serif;
+.upgrade-btn {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100%;
+  max-width: 380px;
   border: 2px solid #ffffff;
   border-radius: 3px;
-  font-size: 16px;
   overflow: hidden;
-  white-space: nowrap;
   cursor: pointer;
-  background-color: #000;
-  color: #fff;
+  font-family: inherit;
+  background-color: #000000;
+  color: #ffffff;
   padding: 0;
+}
+.upgrade-btn:hover {
+  opacity: 0.8;
+}
+.upgrade-btn:disabled {
+  border-color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.btn-header {
+  background-color: #000000;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+}
+.btn-main {
+  background-color: #000000;
+  display: flex;
   align-items: center;
-  height: 1.5rem;
+  border-bottom: 1px solid #ffffff;
+  text-align: left;
+}
+.btn-info {
+  padding: 12px;
+  border-right: 1px solid #ffffff;
+  min-width: 80px;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #ffffff;
+}
+.btn-tier {
+  color: #ffffff;
+}
+.btn-buy-count {
+  color: #ffffff;
+}
+.btn-description {
+  padding: 12px;
+  font-size: 0.8rem;
+  flex: 1;
+  line-height: 1.4;
+  color: #ffffff;
+}
+.btn-cost {
+  background-color: #000000;
+  padding: 8px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+}
+.placeholder-box {
+  border: 2px dashed #ffffff;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 380px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.85rem;
 }
