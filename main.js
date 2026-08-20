@@ -29,12 +29,12 @@ function UP1() {
     game.upNeg10Count += 1
     game.numbers = 0.0000000001
     document.getElementById("number").innerHTML = formatNum(game.numbers);
-    document.getElementById("up1-cost").innerHTML = "Upgrade Maxed";
-    document.getElementById("upgrade-1").disabled = true;
+    document.getElementById("upneg10-cost").innerHTML = "Upgrade Maxed";
+    document.getElementById("upgrade-neg10").disabled = true;
     return;
   }
   game.upNeg10Count += 1
   document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
-  document.getElementById("up1-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10"
+  document.getElementById("upneg10-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10"
 }
 // =================================================
