@@ -15,10 +15,10 @@ var game = {
 var starterList = [0,"ε","BITG","Oe(54)","1/{10,10[2]2}","1/{10,10,10,10}","(g<sub>64</sub>)<sup>-1</sup>","1/{10,10,100}","1/(10^^100)","10<sup>-100</sup>"]
 // =================================================
 function formatNum(decimal) {
-    if (decimal.lt(0.001)) {
+    if (decimal < 0.001) {
         return decimal.toFixed(-math.floor(math.log10(decimal)));
     }
-    if (decimal.lt(1e9)) {
+    if (decimal < 1e9) {
         return decimal.toFixed(3);
     }
     return decimal.toString();
@@ -26,10 +26,10 @@ function formatNum(decimal) {
 // =================================================
 function UP1() {
   if (game.upNeg10Count >= game.upNeg10Max) {
-    return game.numbers = 0.0000000001
-    return document.getElementById("number").innerHTML = formatNum(game.numbers)
+    game.numbers = 0.0000000001
+    document.getElementById("number").innerHTML = formatNum(game.numbers)
   }
-  return game.upNeg10Count += 1
-  return document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
+  game.upNeg10Count += 1
+  document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
 }
 // =================================================
