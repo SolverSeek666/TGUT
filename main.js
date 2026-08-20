@@ -49,15 +49,15 @@ function UPneg9() {
       game.upNeg9Count += 1
       game.numbers += 0.0000000001
       document.getElementById("number").innerHTML = formatNum(game.numbers);
-      document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/5";
+      document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg9Count + "/5";
       document.getElementById("upneg9-cost").innerHTML = "Upgrade Maxed";
       document.getElementById("upgrade-neg9").disabled = true;
       return;
     };
-    game.upNeg10Count += 1;
+    game.upNeg9Count += 1;
     game.numbers += 0.0000000001;
     document.getElementById("number").innerHTML = formatNum(game.numbers);
-    document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/5";
+    document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg9Count + "/5";
     return;
   }
 }
