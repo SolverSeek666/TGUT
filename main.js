@@ -62,3 +62,8 @@ function UPneg9() {
   }
 }
 // =================================================
+// let panel = document.getElementsByClassName("panel");
+// let i < panel.length
+// if (document.getElementsById(`upgrade-neg${10-i}`).disabled = true) {
+//     panel[i+1].style.display = "";
+// }
