@@ -4,6 +4,7 @@ body {
   background-color: #434343;
   color: #fff;
   padding: 20px;
+  padding-top: 0px;
   margin: 0;
 }
 #game {
@@ -28,13 +29,17 @@ body {
   white-space: nowrap;
 }
 #numberContainer {
-  max-width: 100%;
+  width: calc(100% - 40px);
   border-bottom: 1px solid #666;
   height: 100px;
+  padding-top: 20px;
   margin-bottom: 30px;
-  position: sticky;
+  position: fixed;
+  z-index: 100;
+  background-color: #434343;
 }
 .game-body {
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
