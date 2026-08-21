@@ -8,9 +8,12 @@ var game = {
   upNeg9Cost: 0,
   upNeg9Count: 0,
   upNeg9Max: 5,
-  
-  productionPerUpgrade: 0.01,
 
+  upNeg8Cost: 0,
+  upNeg8Count: 0,
+  upNeg8Max: 2,
+  
+  growth: 0,
   add: 0,
   mult: 1,
   exp: 1
@@ -27,47 +30,3 @@ function formatNum(decimal) {
     }
     return decimal.toString();
 }
-// =================================================
-let negpanel = document.getElementsByClassName("negpanel");
-for (let i = 0; i < negpanel.length; i++) {
-    negpanel[i].onclick = function() {
-        if (document.getElementById(`upgrade-neg${10-i}`).disabled === true) {
-            negpanel[i+1].style.display = "";
-        }
-    }
-}
-// =================================================
-function UPneg10() {
-  if (game.upNeg10Count >= game.upNeg10Max-1) {
-    game.upNeg10Count += 1
-    game.numbers = 0.0000000001
-    document.getElementById("number").innerHTML = formatNum(game.numbers);
-    document.getElementById("upneg10-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10";
-    document.getElementById("upneg10-cost").innerHTML = "Upgrade Maxed";
-    document.getElementById("upgrade-neg10").disabled = true;
-    return;
-  }
-  game.upNeg10Count += 1
-  document.getElementById("number").innerHTML = starterList[game.upNeg10Count]
-  document.getElementById("upneg10-buy-count").innerHTML = "Buy: " + game.upNeg10Count + "/10"
-}
-// =================================================
-function UPneg9() {
-  if (game.numbers >= 0.0000000001) {
-    if (game.upNeg9Count >= game.upNeg9Max-1) {
-      game.upNeg9Count += 1
-      game.numbers += 0.0000000001
-      document.getElementById("number").innerHTML = formatNum(game.numbers);
-      document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg9Count + "/5";
-      document.getElementById("upneg9-cost").innerHTML = "Upgrade Maxed";
-      document.getElementById("upgrade-neg9").disabled = true;
-      return;
-    };
-    game.upNeg9Count += 1;
-    game.numbers += 0.0000000001;
-    document.getElementById("number").innerHTML = formatNum(game.numbers);
-    document.getElementById("upneg9-buy-count").innerHTML = "Buy: " + game.upNeg9Count + "/5";
-    return;
-  }
-}
-// =================================================
