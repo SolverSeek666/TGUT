@@ -71,7 +71,7 @@ function UPneg7() {
       document.getElementById("upgrade-neg7").disabled = true;
       return;
     };
-    game.upNeg8Count += 1;
+    game.upNeg7Count += 1;
     game.numbers *= 3;
     document.getElementById("number").innerHTML = formatNum(game.numbers);
     document.getElementById("upneg7-buy-count").innerHTML = "Buy: " + game.upNeg7Count + "/2";
