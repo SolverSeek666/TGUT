@@ -1,17 +1,18 @@
 var game = {
   numbers: 0,
   
-  upNeg10Cost: 0,
   upNeg10Count: 0,
-  upNeg10Max: 10,
-  
-  upNeg9Cost: 0,
   upNeg9Count: 0,
-  upNeg9Max: 5,
-
-  upNeg8Cost: 0,
   upNeg8Count: 0,
-  upNeg8Max: 2,
+  upNeg7Count: 0,
+  upNeg6Count: 0,
+  upNeg5Count: 0,
+  upNeg4Count: 0,
+  upNeg3Count: 0,
+  upNeg2Count: 0,
+  upNeg1Count: 0,
+  
+  up0Count: 0,
   
   growth: 0,
   add: 0,
