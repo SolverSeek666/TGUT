@@ -6,6 +6,7 @@ var game = {
   mult: 1,
   exp: 1,
   
+  time: 0,
   seconds: 0,
   minutes: 0,
   hours: 0,
@@ -30,9 +31,14 @@ function time() {
   const startTime = Date.now();  
   setInterval(() => {
     const currentTime = Date.now();
-    game.seconds = (currentTime - startTime) / 1000;
+    game.time = (currentTime - startTime) / 1000;
   }, 1);
 }
+game.seconds = game.time-60*game.minutes
+game.minutes = math.floor(game.time/60)-60*game.hours
+game.hours = math.floor(game.time/3600)-24*game.days
+game.days = math.floor(game.time/86400)-365.25*game.years
+game.years = math.floor(game.time/31557600)
 // =================================================
 var starterList = ["0","ε","BITG","Oe(54)","1/{10,10[2]2}","1/{10,10,10,10}","(g<sub>64</sub>)<sup>-1</sup>","1/{10,10,100}","1/(10^^100)","10<sup>-100</sup>"]
 // =================================================
